@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root{
+    --clr-primary: #F5F5F5;
+    --clr-secondary: #38BDF8;
+  }
+  html{
+    color-scheme: dark;
+  font-family: system-ui;
+  }
+  
+  body{
+    min-height: 100svh;
+    display: grid;
+    place-content: center;
+    /*font-size: clamp(0.9rem, 2.5vw,1.4rem);*/
+    color: var(--clr-primary);
+    padding: 1rem;
+  }
+  h1{
+    font-size: clamp(1.2rem,2.5vw,2.2rem);
+    font-weight: 500;
+  }
+  code{
+    color: var(--clr-secondary);
+    border: 1px solid hsl(from var(--clr-primary) h s 50% / 0.5);
+    padding-inline: .25rem;
+    border-radius: 5px;
+  }
+  .wrapper{
+    background-color: #FFF;
+    padding: 1rem;
+    width: 100%;
+    max-width: 600px;
+    color: black;
+    
+  }
+  table{
+    width: 100%;
+     border-collapse: collapse;
+  }
+  th{
+    background-color: #BAE6FD;
+    font-weight: 300;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  th,td{
+    padding: .25rem;
+     border-bottom: 1px solid #ddd;
+  }
+  tbody tr:nth-child(even) > td{
+    background-color: #F9FAFB;
+  }
+  tr:hover > td{
+    background-color: #FEF9C3 !important;
+  }
+  table:has(td:nth-child(1):hover) :where(td:nth-child(1),th:nth-child(1)),
+  table:has(td:nth-child(2):hover) :where(td:nth-child(2),th:nth-child(2)),
+  table:has(td:nth-child(3):hover) :where(td:nth-child(3),th:nth-child(3)),
+  table:has(td:nth-child(4):hover) :where(td:nth-child(4),th:nth-child(4)),
+  table:has(td:nth-child(5):hover) :where(td:nth-child(5),th:nth-child(5)) {
+  background-color: #BBF7D0;
+    
+  }
+  td:hover{
+    /* set some style on current hovered cell */
+    mix-blend-mode: luminosity;
+  }
