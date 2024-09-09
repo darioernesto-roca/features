@@ -1,2 +1,2 @@
 // Silent is king
-console.log('Comming from index.js');
+console.log('Coming from index.js');
