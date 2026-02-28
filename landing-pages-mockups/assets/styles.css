@@ -2,30 +2,32 @@
 
   /* CARD ------------------------------------------------------------- */
   .modal-card-st {
-    border: 4px solid #fff;
-    border-radius: 0.75rem;
+    border: 1px solid #cbd5e1;
+    border-radius: 14px;
     overflow: hidden;
-    transition: transform 0.2s;
     position: relative;
-    background: #e9e9e9;
-}
-  .modal-card-st:hover{ transform:scale(1.05); }
+    background: #f8fafc;
+    box-shadow:
+      0 14px 30px rgba(15, 23, 42, 0.15),
+      0 2px 5px rgba(15, 23, 42, 0.08);
+  }
 
   /* macOS dots ------------------------------------------------------- */
   .mac-dots {
-    position: initial;
-    top: 0.75rem;
-    left: 0.75rem;
+    position: relative;
     display: flex;
+    align-items: center;
     gap: 0.5rem;
     z-index: 10;
-    padding: 8px;
-    background-color: #e9e9e9;
-}
+    padding: 10px 12px;
+    background: linear-gradient(180deg, #f8fafc 0%, #e2e8f0 100%);
+    border-bottom: 1px solid #cbd5e1;
+  }
   .mac-dots span{
     width:12px;
     height:12px;
     border-radius:9999px;
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.2);
   }
   .dot-red-v2    { background:#ff5f57; }
   .dot-yellow-v2 { background:#febc2e; }
@@ -38,6 +40,7 @@
     overflow-x:hidden;               /* evita deslocamento lateral */
     scrollbar-width:thin;            /* Firefox */
     scrollbar-color:#94a3b8 #f1f5f9;
+    background:#ffffff;
   }
   /* WebKit */
   .image-scroll-lpv2::-webkit-scrollbar{ width:8px; }
