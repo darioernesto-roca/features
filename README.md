@@ -6,6 +6,7 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 
 | Feature | Description | Entry Point |
 | --- | --- | --- |
+| **Accessible Modal Variants** | Three accessible overlay patterns (center modal, slide-up drawer, side panel) with keyboard focus trap, ESC close, and backdrop close behavior. | [`accessible-modal-variants/index.html`](accessible-modal-variants/index.html) |
 | **Button Rotating Border Glow Effect** | A call-to-action button with a conic-gradient border that animates via a custom CSS `@property` and keyframes, creating a rotating glow around the button. | [`button-rotating-border-glow-effect/index.html`](button-rotating-border-glow-effect/index.html) |
 | **Cards with Inverted Border Radius** | A three-card layout with image covers, inset icon corner treatment, and tag chips; showcases a stylized “inverted” border-radius effect for the corner badge. | [`cards-with-inverted-border-radius/index.html`](cards-with-inverted-border-radius/index.html) |
 | **Fluid Grid Gallery** | A multi-column image gallery where hovering an item expands its row height within a column using `:has()` to drive grid row resizing. | [`fluid-grid-gallery/index.html`](fluid-grid-gallery/index.html) |
