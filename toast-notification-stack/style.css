@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #ecf1ff;
+    background: radial-gradient(circle at 20% 10%, #2f3f96, #111529 60%);
+}
+
+.demo {
+    max-width: 52rem;
+    margin: 0 auto;
+    padding: 4rem 1.25rem;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+p {
+    color: #cdd6ff;
+}
+
+.actions {
+    margin-top: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+button {
+    border: 0;
+    border-radius: 0.65rem;
+    padding: 0.72rem 1.05rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1a2450;
+    background: #e7ecff;
+}
+
+.toast-stack {
+    position: fixed;
+    top: 1rem;
+    right: 1rem;
+    display: grid;
+    gap: 0.75rem;
+    width: min(24rem, calc(100vw - 2rem));
+    z-index: 50;
+}
+
+.toast {
+    position: relative;
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 0.75rem;
+    align-items: start;
+    padding: 0.8rem 0.8rem 1rem;
+    border-radius: 0.85rem;
+    border: 1px solid #313c72;
+    background: #121a3a;
+    color: #ebefff;
+    box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.28);
+    transform: translateX(1rem) scale(0.98);
+    opacity: 0;
+    animation: toast-in 250ms ease forwards;
+}
+
+.toast.is-leaving {
+    animation: toast-out 200ms ease forwards;
+}
+
+.toast-icon {
+    width: 1.4rem;
+    height: 1.4rem;
+    border-radius: 50%;
+    margin-top: 0.1rem;
+}
+
+.toast-title {
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+.toast-message {
+    margin: 0.25rem 0 0;
+    font-size: 0.85rem;
+    color: #c6cefa;
+}
+
+.toast-close {
+    padding: 0.2rem 0.5rem;
+    background: transparent;
+    color: #e9eefe;
+    font-size: 1.3rem;
+    line-height: 1;
+}
+
+.toast-progress {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 0.2rem;
+    border-radius: 0 0 0.85rem 0.85rem;
+    transform-origin: left;
+    animation: toast-progress var(--toast-duration, 4000ms) linear forwards;
+}
+
+.toast-success .toast-icon,
+.toast-success .toast-progress {
+    background: #39c18d;
+}
+
+.toast-error .toast-icon,
+.toast-error .toast-progress {
+    background: #ff6a84;
+}
+
+.toast-info .toast-icon,
+.toast-info .toast-progress {
+    background: #5e8fff;
+}
+
+@keyframes toast-in {
+    to {
+        transform: translateX(0) scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes toast-out {
+    to {
+        transform: translateX(1.1rem) scale(0.98);
+        opacity: 0;
+    }
+}
+
+@keyframes toast-progress {
+    from {
+        transform: scaleX(1);
+    }
+
+    to {
+        transform: scaleX(0);
+    }
+}
+
+@media (max-width: 40rem) {
+    .toast-stack {
+        right: 0.75rem;
+        left: 0.75rem;
+        width: auto;
+    }
+}

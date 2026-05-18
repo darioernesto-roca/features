@@ -6,12 +6,15 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 
 | Feature | Description | Entry Point |
 | --- | --- | --- |
+| **Accessible Modal Variants** | Three accessible overlay patterns (center modal, slide-up drawer, side panel) with keyboard focus trap, ESC close, and backdrop close behavior. | [`accessible-modal-variants/index.html`](accessible-modal-variants/index.html) |
 | **Button Rotating Border Glow Effect** | A call-to-action button with a conic-gradient border that animates via a custom CSS `@property` and keyframes, creating a rotating glow around the button. | [`button-rotating-border-glow-effect/index.html`](button-rotating-border-glow-effect/index.html) |
+| **Command Palette UI** | A spotlight-style quick action/search modal with keyboard-first interactions: Ctrl/⌘+K toggle, arrow navigation, Enter execute, ESC close, and backdrop close. | [`command-palette-ui/index.html`](command-palette-ui/index.html) |
 | **Cards with Inverted Border Radius** | A three-card layout with image covers, inset icon corner treatment, and tag chips; showcases a stylized “inverted” border-radius effect for the corner badge. | [`cards-with-inverted-border-radius/index.html`](cards-with-inverted-border-radius/index.html) |
 | **Fluid Grid Gallery** | A multi-column image gallery where hovering an item expands its row height within a column using `:has()` to drive grid row resizing. | [`fluid-grid-gallery/index.html`](fluid-grid-gallery/index.html) |
 | **Fluid Grid Gallery v2** | An enhanced gallery that expands both columns and rows on hover for a more dynamic masonry-like effect, with hover transitions and desaturated images that colorize on hover. | [`fluid-grid-gallery-2/index.html`](fluid-grid-gallery-2/index.html) |
 | **Image Carousel 3D** | A 3D rotating carousel using CSS transforms, perspective, and keyframe animation, with left/right controls to switch rotation direction. | [`image-carousel-3d/index.html`](image-carousel-3d/index.html) |
 | **Scroll-driven Animation** | Scroll-linked progress bar and card entrance animations using `animation-timeline: scroll()` and `animation-timeline: view()` for scroll-driven effects. | [`scroll-driven-animation/index.html`](scroll-driven-animation/index.html) |
+| **Toast Notification Stack** | Success, error, and info toasts with timed dismissal plus animated entrance/exit transitions. | [`toast-notification-stack/index.html`](toast-notification-stack/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 
 ## How to View the Demos
