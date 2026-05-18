@@ -14,6 +14,7 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Fluid Grid Gallery v2** | An enhanced gallery that expands both columns and rows on hover for a more dynamic masonry-like effect, with hover transitions and desaturated images that colorize on hover. | [`fluid-grid-gallery-2/index.html`](fluid-grid-gallery-2/index.html) |
 | **Image Carousel 3D** | A 3D rotating carousel using CSS transforms, perspective, and keyframe animation, with left/right controls to switch rotation direction. | [`image-carousel-3d/index.html`](image-carousel-3d/index.html) |
 | **Scroll-driven Animation** | Scroll-linked progress bar and card entrance animations using `animation-timeline: scroll()` and `animation-timeline: view()` for scroll-driven effects. | [`scroll-driven-animation/index.html`](scroll-driven-animation/index.html) |
+| **Toast Notification Stack** | Success, error, and info toasts with timed dismissal plus animated entrance/exit transitions. | [`toast-notification-stack/index.html`](toast-notification-stack/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 
 ## How to View the Demos
