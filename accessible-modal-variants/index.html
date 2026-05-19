@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Accessible Modal Variants</title>
+</head>
+<body>
+    <main class="demo">
+        <h1>Accessible Modal Variants</h1>
+        <p>Three accessible overlays sharing the same behavior: focus trap, ESC close, and backdrop close.</p>
+
+        <div class="actions">
+            <button class="open-btn" data-open="modal-center">Open Center Modal</button>
+            <button class="open-btn" data-open="modal-drawer">Open Slide-up Drawer</button>
+            <button class="open-btn" data-open="modal-side">Open Side Panel</button>
+        </div>
+    </main>
+
+    <section id="modal-center" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-center-title" aria-hidden="true">
+        <div class="surface surface-center" tabindex="-1">
+            <header>
+                <h2 id="modal-center-title">Center Modal</h2>
+                <button class="close-btn" data-close aria-label="Close center modal">×</button>
+            </header>
+            <p>This centered modal is ideal for confirmations, quick forms, and focused messages.</p>
+            <div class="field-wrap">
+                <label for="center-email">Email</label>
+                <input id="center-email" type="email" placeholder="name@example.com">
+            </div>
+            <footer>
+                <button data-close>Cancel</button>
+                <button class="primary">Save changes</button>
+            </footer>
+        </div>
+    </section>
+
+    <section id="modal-drawer" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-drawer-title" aria-hidden="true">
+        <div class="surface surface-drawer" tabindex="-1">
+            <header>
+                <h2 id="modal-drawer-title">Slide-up Drawer</h2>
+                <button class="close-btn" data-close aria-label="Close slide-up drawer">×</button>
+            </header>
+            <p>Great for mobile actions where vertical reach matters and context should stay visible.</p>
+            <ul>
+                <li>Fast actions</li>
+                <li>Filter controls</li>
+                <li>Compact forms</li>
+            </ul>
+            <footer>
+                <button data-close>Close</button>
+                <button class="primary">Continue</button>
+            </footer>
+        </div>
+    </section>
+
+    <section id="modal-side" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-side-title" aria-hidden="true">
+        <div class="surface surface-side" tabindex="-1">
+            <header>
+                <h2 id="modal-side-title">Side Panel</h2>
+                <button class="close-btn" data-close aria-label="Close side panel">×</button>
+            </header>
+            <p>Useful for non-destructive editing flows like settings and cart summaries.</p>
+            <div class="field-wrap">
+                <label for="side-notes">Notes</label>
+                <textarea id="side-notes" rows="5" placeholder="Type a quick note"></textarea>
+            </div>
+            <footer>
+                <button data-close>Dismiss</button>
+                <button class="primary">Apply</button>
+            </footer>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

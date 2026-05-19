@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Pricing Table with Toggle</title>
+</head>
+<body>
+    <main class="pricing-demo">
+        <header class="hero">
+            <h1>Pricing Table with Toggle</h1>
+            <p>Switch between monthly and yearly billing and compare plan features at a glance.</p>
+
+            <label class="billing-toggle" for="billing-toggle">
+                <span>Monthly</span>
+                <input id="billing-toggle" type="checkbox" aria-label="Toggle yearly billing">
+                <span class="switch" aria-hidden="true"></span>
+                <span>Yearly <strong>(save 20%)</strong></span>
+            </label>
+        </header>
+
+        <section class="plans" aria-label="Pricing plans">
+            <article class="plan-card">
+                <h2>Starter</h2>
+                <p class="description">For personal sites and early prototypes.</p>
+                <p class="price" data-monthly="$19" data-yearly="$15">$19</p>
+                <p class="period">per month</p>
+                <button type="button">Choose Starter</button>
+            </article>
+
+            <article class="plan-card popular" aria-label="Most popular plan">
+                <div class="ribbon">Most Popular</div>
+                <h2>Growth</h2>
+                <p class="description">For teams shipping production websites.</p>
+                <p class="price" data-monthly="$49" data-yearly="$39">$49</p>
+                <p class="period">per month</p>
+                <button type="button">Choose Growth</button>
+            </article>
+
+            <article class="plan-card">
+                <h2>Scale</h2>
+                <p class="description">For high-traffic platforms and agencies.</p>
+                <p class="price" data-monthly="$99" data-yearly="$79">$99</p>
+                <p class="period">per month</p>
+                <button type="button">Choose Scale</button>
+            </article>
+        </section>
+
+        <section class="comparison" aria-label="Feature comparison">
+            <h2>Feature comparison</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        <th>Starter</th>
+                        <th>Growth</th>
+                        <th>Scale</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Projects</td>
+                        <td>3</td>
+                        <td>15</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Team members</td>
+                        <td>1</td>
+                        <td>8</td>
+                        <td>Unlimited</td>
+                    </tr>
+                    <tr>
+                        <td>Priority support</td>
+                        <td>—</td>
+                        <td>Included</td>
+                        <td>Included</td>
+                    </tr>
+                    <tr>
+                        <td>Custom domains</td>
+                        <td>1</td>
+                        <td>5</td>
+                        <td>25</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
