@@ -15,6 +15,7 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Image Carousel 3D** | A 3D rotating carousel using CSS transforms, perspective, and keyframe animation, with left/right controls to switch rotation direction. | [`image-carousel-3d/index.html`](image-carousel-3d/index.html) |
 | **Pricing Table with Toggle** | A pricing section with monthly/yearly switch, a “Most Popular” plan ribbon, and feature comparison rows. | [`pricing-table-toggle/index.html`](pricing-table-toggle/index.html) |
 | **Scroll-driven Animation** | Scroll-linked progress bar and card entrance animations using `animation-timeline: scroll()` and `animation-timeline: view()` for scroll-driven effects. | [`scroll-driven-animation/index.html`](scroll-driven-animation/index.html) |
+| **Timeline / Stepper Components** | Vertical timeline plus horizontal checkout stepper with progress and completed states. | [`timeline-stepper-components/index.html`](timeline-stepper-components/index.html) |
 | **Toast Notification Stack** | Success, error, and info toasts with timed dismissal plus animated entrance/exit transitions. | [`toast-notification-stack/index.html`](toast-notification-stack/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 

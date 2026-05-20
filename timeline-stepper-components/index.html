@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Timeline / Stepper Components</title>
+</head>
+<body>
+    <main class="demo">
+        <h1>Timeline / Stepper Components</h1>
+        <p>Vertical timeline and horizontal checkout stepper with completed and in-progress states.</p>
+
+        <section class="panel" aria-labelledby="timeline-title">
+            <h2 id="timeline-title">Project Timeline</h2>
+            <ol class="timeline">
+                <li class="timeline-item is-complete">
+                    <h3>Brief approved</h3>
+                    <p>Project scope, deadlines, and required pages finalized.</p>
+                </li>
+                <li class="timeline-item is-complete">
+                    <h3>Wireframes reviewed</h3>
+                    <p>Mobile and desktop wireframes approved by stakeholders.</p>
+                </li>
+                <li class="timeline-item is-current">
+                    <h3>UI implementation</h3>
+                    <p>Building final components and validating responsive behavior.</p>
+                </li>
+                <li class="timeline-item">
+                    <h3>QA + launch</h3>
+                    <p>Accessibility, performance, and content checks before release.</p>
+                </li>
+            </ol>
+        </section>
+
+        <section class="panel" aria-labelledby="stepper-title">
+            <h2 id="stepper-title">Checkout Stepper</h2>
+            <ol class="stepper" aria-label="Checkout progress">
+                <li class="step is-complete" aria-label="Cart completed">
+                    <span class="marker">✓</span>
+                    <span>Cart</span>
+                </li>
+                <li class="step is-complete" aria-label="Shipping completed">
+                    <span class="marker">✓</span>
+                    <span>Shipping</span>
+                </li>
+                <li class="step is-current" aria-current="step" aria-label="Payment in progress">
+                    <span class="marker">3</span>
+                    <span>Payment</span>
+                </li>
+                <li class="step" aria-label="Review pending">
+                    <span class="marker">4</span>
+                    <span>Review</span>
+                </li>
+            </ol>
+        </section>
+    </main>
+</body>
+</html>
