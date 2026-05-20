@@ -1,0 +1,166 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+    color: #eef2ff;
+    background: radial-gradient(circle at 20% 10%, #3445a8, #121736 58%);
+}
+
+.pricing-demo {
+    width: min(70rem, 100%);
+    margin: 0 auto;
+    padding: 3rem 1rem 4rem;
+}
+
+.hero {
+    text-align: center;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: clamp(2rem, 4vw, 3rem);
+}
+
+.hero p {
+    color: #c6d0fb;
+}
+
+.billing-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 0.5rem;
+    cursor: pointer;
+}
+
+.billing-toggle input {
+    position: absolute;
+    opacity: 0;
+}
+
+.switch {
+    width: 3rem;
+    height: 1.7rem;
+    border-radius: 999px;
+    background: #263065;
+    border: 1px solid #4a59a4;
+    position: relative;
+    transition: background 180ms ease;
+}
+
+.switch::after {
+    content: '';
+    position: absolute;
+    top: 0.14rem;
+    left: 0.14rem;
+    width: 1.3rem;
+    height: 1.3rem;
+    border-radius: 50%;
+    background: #f1f4ff;
+    transition: transform 180ms ease;
+}
+
+.billing-toggle input:checked + .switch {
+    background: #3f63ff;
+}
+
+.billing-toggle input:checked + .switch::after {
+    transform: translateX(1.3rem);
+}
+
+.plans {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.plan-card {
+    background: #131a3c;
+    border: 1px solid #2f3a72;
+    border-radius: 1rem;
+    padding: 1rem;
+    position: relative;
+}
+
+.plan-card h2,
+.price {
+    margin: 0;
+}
+
+.description {
+    color: #c6d0fb;
+    min-height: 2.6rem;
+}
+
+.price {
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.period {
+    margin-top: 0.2rem;
+    color: #aebcf8;
+}
+
+.plan-card button {
+    margin-top: 1rem;
+    width: 100%;
+    border: 0;
+    border-radius: 0.65rem;
+    padding: 0.7rem 0.9rem;
+    font-weight: 700;
+    cursor: pointer;
+    color: #1a2558;
+    background: #edf1ff;
+}
+
+.plan-card.popular {
+    border-color: #6f83ff;
+    box-shadow: 0 0 0 1px rgba(111, 131, 255, 0.25), 0 1rem 1.5rem rgba(0, 0, 0, 0.2);
+}
+
+.ribbon {
+    position: absolute;
+    top: -0.65rem;
+    right: 0.85rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    color: #fff;
+    background: linear-gradient(135deg, #5d77ff, #7e56ff);
+    border-radius: 999px;
+    padding: 0.26rem 0.62rem;
+}
+
+.comparison {
+    margin-top: 2rem;
+}
+
+.comparison table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 0.8rem;
+}
+
+.comparison th,
+.comparison td {
+    padding: 0.75rem;
+    text-align: left;
+    border-bottom: 1px solid #2c376b;
+    background: #121937;
+}
+
+.comparison thead th {
+    background: #1a2450;
+}
+
+@media (max-width: 52rem) {
+    .plans {
+        grid-template-columns: 1fr;
+    }
+}
