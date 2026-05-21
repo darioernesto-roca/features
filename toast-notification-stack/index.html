@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Toast Notification Stack</title>
+</head>
+<body>
+    <main class="demo">
+        <h1>Toast Notification Stack</h1>
+        <p>Success, error, and info toasts with timed dismissal and animated entry/exit.</p>
+
+        <div class="actions">
+            <button type="button" data-toast-type="success">Show Success Toast</button>
+            <button type="button" data-toast-type="error">Show Error Toast</button>
+            <button type="button" data-toast-type="info">Show Info Toast</button>
+        </div>
+    </main>
+
+    <section class="toast-stack" aria-live="polite" aria-atomic="false"></section>
+
+    <template id="toast-template">
+        <article class="toast" role="status">
+            <div class="toast-icon" aria-hidden="true"></div>
+            <div class="toast-content">
+                <h2 class="toast-title"></h2>
+                <p class="toast-message"></p>
+            </div>
+            <button class="toast-close" type="button" aria-label="Dismiss notification">×</button>
+            <div class="toast-progress"></div>
+        </article>
+    </template>
+
+    <script src="index.js"></script>
+</body>
+</html>

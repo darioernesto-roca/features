@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Command Palette UI</title>
+</head>
+<body>
+    <main class="hero">
+        <p class="eyebrow">Keyboard-first demo</p>
+        <h1>Command Palette UI</h1>
+        <p>Press <kbd>Ctrl</kbd>/<kbd>⌘</kbd> + <kbd>K</kbd> to open a spotlight-style quick action modal.</p>
+        <button class="open-palette" type="button" data-open-palette>
+            Open Palette
+            <span>Ctrl / ⌘ + K</span>
+        </button>
+    </main>
+
+    <section class="palette" id="command-palette" role="dialog" aria-modal="true" aria-labelledby="palette-title" aria-hidden="true">
+        <div class="palette-panel" tabindex="-1">
+            <h2 id="palette-title" class="sr-only">Command Palette</h2>
+
+            <div class="palette-search-wrap">
+                <span aria-hidden="true">⌕</span>
+                <input id="palette-search" type="text" placeholder="Search actions…" autocomplete="off">
+                <kbd>ESC</kbd>
+            </div>
+
+            <ul class="palette-list" role="listbox" aria-label="Quick actions"></ul>
+
+            <footer>
+                <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+                <span><kbd>Enter</kbd> run</span>
+            </footer>
+        </div>
+    </section>
+
+    <script src="index.js"></script>
+</body>
+</html>

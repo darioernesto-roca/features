@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Mega Menu / Dropdown Navigation</title>
+</head>
+<body>
+    <header class="site-header">
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="#" class="logo">RocaUI</a>
+
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="nav-links">
+                Menu
+            </button>
+
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#">Home</a></li>
+                <li class="has-mega">
+                    <button class="mega-toggle" type="button" aria-expanded="false" aria-controls="mega-panel-products">
+                        Products
+                    </button>
+
+                    <section class="mega-panel" id="mega-panel-products" aria-label="Products menu">
+                        <div class="mega-grid">
+                            <article>
+                                <h2>Platform</h2>
+                                <a href="#"><span class="icon">⚡</span> Performance Suite</a>
+                                <a href="#"><span class="icon">🧩</span> Component Library</a>
+                                <a href="#"><span class="icon">🔐</span> Auth + Security</a>
+                            </article>
+                            <article>
+                                <h2>Use Cases</h2>
+                                <a href="#"><span class="icon">🛒</span> Ecommerce</a>
+                                <a href="#"><span class="icon">📰</span> Publishing</a>
+                                <a href="#"><span class="icon">📈</span> Marketing Sites</a>
+                            </article>
+                            <aside class="promo">
+                                <p class="eyebrow">Launch Week</p>
+                                <h3>Ship faster with prebuilt UI patterns.</h3>
+                                <p>Explore 60+ production-ready sections and templates for modern web teams.</p>
+                                <a href="#" class="promo-link">View templates →</a>
+                            </aside>
+                        </div>
+                    </section>
+                </li>
+                <li><a href="#">Pricing</a></li>
+                <li><a href="#">Docs</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content">
+        <h1>Mega Menu / Dropdown Navigation</h1>
+        <p>Desktop includes a multi-column dropdown with icons and a promo block. Mobile collapses into expandable navigation.</p>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
