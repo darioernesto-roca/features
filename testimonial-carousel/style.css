@@ -1,0 +1,131 @@
+:root {
+  color-scheme: light;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 2rem 1rem;
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
+  background: linear-gradient(145deg, #f8fafc, #eef2ff);
+  color: #111827;
+}
+
+.testimonial-carousel {
+  width: min(100%, 760px);
+  background: #ffffff;
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 55px rgba(17, 24, 39, 0.1);
+  padding: 1.5rem;
+}
+
+.carousel-header {
+  margin-bottom: 1rem;
+}
+
+.carousel-header h1 {
+  margin: 0.35rem 0 0;
+  font-size: clamp(1.25rem, 2.8vw, 1.85rem);
+}
+
+.eyebrow {
+  margin: 0;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  font-weight: 700;
+  color: #4f46e5;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  touch-action: pan-y;
+  border-radius: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  transition: transform 320ms ease;
+  will-change: transform;
+}
+
+.testimonial-slide {
+  flex: 0 0 100%;
+  padding: 1.35rem;
+  background: linear-gradient(180deg, #fafafa, #f3f4f6);
+  border: 1px solid #e5e7eb;
+  border-radius: 1rem;
+}
+
+.testimonial-slide blockquote {
+  margin: 0;
+  font-size: clamp(1rem, 2vw, 1.2rem);
+  line-height: 1.65;
+}
+
+.author {
+  margin: 1rem 0 0;
+  font-weight: 700;
+}
+
+.meta {
+  margin: 0.2rem 0 0;
+  color: #4b5563;
+  font-size: 0.92rem;
+}
+
+.carousel-controls {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.control {
+  border: none;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 999px;
+  cursor: pointer;
+  background: #111827;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.dots {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.dot {
+  border: none;
+  width: 0.68rem;
+  height: 0.68rem;
+  border-radius: 999px;
+  background: #d1d5db;
+  cursor: pointer;
+}
+
+.dot.is-active {
+  background: #4f46e5;
+}
+
+@media (max-width: 640px) {
+  .testimonial-carousel {
+    padding: 1.1rem;
+  }
+
+  .testimonial-slide {
+    padding: 1rem;
+  }
+}

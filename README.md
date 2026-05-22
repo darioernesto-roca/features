@@ -18,6 +18,7 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Scroll-driven Animation** | Scroll-linked progress bar and card entrance animations using `animation-timeline: scroll()` and `animation-timeline: view()` for scroll-driven effects. | [`scroll-driven-animation/index.html`](scroll-driven-animation/index.html) |
 | **Timeline / Stepper Components** | Vertical timeline plus horizontal checkout stepper with progress and completed states. | [`timeline-stepper-components/index.html`](timeline-stepper-components/index.html) |
 | **Toast Notification Stack** | Success, error, and info toasts with timed dismissal plus animated entrance/exit transitions. | [`toast-notification-stack/index.html`](toast-notification-stack/index.html) |
+| **Testimonial Carousel** | A responsive testimonial slider with auto-play, previous/next controls, dot navigation, and pointer swipe-ready interactions. | [`testimonial-carousel/index.html`](testimonial-carousel/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 
 ## How to View the Demos
