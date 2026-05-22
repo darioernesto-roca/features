@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Testimonial Carousel</title>
+</head>
+<body>
+  <section class="testimonial-carousel" aria-label="Client testimonials" data-autoplay="true" data-interval="5000">
+    <header class="carousel-header">
+      <p class="eyebrow">What clients say</p>
+      <h1>Trusted by teams shipping faster</h1>
+    </header>
+
+    <div class="carousel-viewport" tabindex="0" aria-live="polite">
+      <ul class="carousel-track">
+        <li class="testimonial-slide is-active" aria-hidden="false">
+          <blockquote>
+            “The new workflow cut our release cycle from two weeks to three days. Setup felt effortless and the results were immediate.”
+          </blockquote>
+          <p class="author">Ariana Lee</p>
+          <p class="meta">Product Lead, Meridian Labs</p>
+        </li>
+        <li class="testimonial-slide" aria-hidden="true">
+          <blockquote>
+            “Performance scores improved overnight. We kept the same design while making the entire experience feel dramatically faster.”
+          </blockquote>
+          <p class="author">Carlos Mendes</p>
+          <p class="meta">Frontend Engineer, Northfield</p>
+        </li>
+        <li class="testimonial-slide" aria-hidden="true">
+          <blockquote>
+            “Our support team saw fewer tickets in the first month because users could finally find what they needed without friction.”
+          </blockquote>
+          <p class="author">Dana Whitman</p>
+          <p class="meta">Operations Manager, Urban Shelf</p>
+        </li>
+      </ul>
+    </div>
+
+    <div class="carousel-controls">
+      <button type="button" class="control prev" aria-label="Show previous testimonial">←</button>
+      <div class="dots" role="tablist" aria-label="Select testimonial">
+        <button type="button" class="dot is-active" role="tab" aria-selected="true" aria-label="Go to testimonial 1"></button>
+        <button type="button" class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 2"></button>
+        <button type="button" class="dot" role="tab" aria-selected="false" aria-label="Go to testimonial 3"></button>
+      </div>
+      <button type="button" class="control next" aria-label="Show next testimonial">→</button>
+    </div>
+  </section>
+
+  <script src="index.js"></script>
+</body>
+</html>
