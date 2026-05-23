@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>FAQ Accordion Variants</title>
+</head>
+<body>
+    <main class="page">
+        <header class="hero">
+            <h1>FAQ Accordion Variants</h1>
+            <p>Clean accordion interactions with animated icon transitions plus a nested, section-based FAQ layout.</p>
+        </header>
+
+        <section class="panel" aria-labelledby="simple-faq-title">
+            <h2 id="simple-faq-title">Clean Accordion</h2>
+            <div class="accordion" data-accordion>
+                <details class="faq-item" open>
+                    <summary>
+                        <span>Can I allow more than one item to stay open?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="content">
+                        <p>Yes. This variant is configured for single-open behavior by default, but you can remove that rule in JavaScript if your UX needs multi-open sections.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>How does the icon transition work?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="content">
+                        <p>The plus icon is built with pseudo-elements and smoothly rotates/fades into a minus state when each item expands.</p>
+                    </div>
+                </details>
+
+                <details class="faq-item">
+                    <summary>
+                        <span>Is this keyboard accessible?</span>
+                        <span class="icon" aria-hidden="true"></span>
+                    </summary>
+                    <div class="content">
+                        <p>Yes. Native <code>&lt;details&gt;</code> and <code>&lt;summary&gt;</code> provide keyboard and screen-reader support while still allowing custom styling.</p>
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <section class="panel" aria-labelledby="nested-faq-title">
+            <h2 id="nested-faq-title">Nested / Sectioned FAQ</h2>
+            <div class="faq-grid">
+                <article class="faq-group" aria-labelledby="group-billing">
+                    <h3 id="group-billing">Billing</h3>
+                    <div class="accordion" data-accordion>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Do you offer annual billing?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="content">
+                                <p>Yes, annual plans include a discount compared to month-to-month billing and can be changed from account settings anytime.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Can I download invoices?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="content">
+                                <p>Invoices are generated automatically and available under your billing history panel.</p>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+
+                <article class="faq-group" aria-labelledby="group-product">
+                    <h3 id="group-product">Product</h3>
+                    <div class="accordion" data-accordion>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Is there a dark mode?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="content">
+                                <p>Dark mode is available by default and can follow the system preference or be forced in settings.</p>
+                            </div>
+                        </details>
+                        <details class="faq-item">
+                            <summary>
+                                <span>Can teams share templates?</span>
+                                <span class="icon" aria-hidden="true"></span>
+                            </summary>
+                            <div class="content">
+                                <p>Yes. Team spaces can share reusable templates, blocks, and onboarding checklists.</p>
+                            </div>
+                        </details>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <script src="index.js"></script>
+</body>
+</html>
