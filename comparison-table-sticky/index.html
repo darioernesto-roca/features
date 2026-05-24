@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Comparison Table (Sticky Header + First Column)</title>
+</head>
+<body>
+  <main class="comparison-section">
+    <header class="section-heading">
+      <p class="eyebrow">SaaS feature matrix</p>
+      <h1>Comparison Table (sticky header + first column)</h1>
+      <p class="subtext">Built for product and pricing pages with hover highlighting and mobile fallback cards.</p>
+    </header>
+
+    <div class="table-shell" role="region" aria-label="Plan comparison" tabindex="0">
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th scope="col" class="sticky-col plan-col">Features</th>
+            <th scope="col">Starter</th>
+            <th scope="col">Growth</th>
+            <th scope="col">Scale</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row" class="sticky-col">Monthly price</th>
+            <td>$19</td>
+            <td>$49</td>
+            <td>$129</td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">Team members</th>
+            <td>3</td>
+            <td>15</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">Storage</th>
+            <td>100 GB</td>
+            <td>1 TB</td>
+            <td>5 TB</td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">Custom domains</th>
+            <td>1</td>
+            <td>10</td>
+            <td>Unlimited</td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">SLA uptime</th>
+            <td>99.5%</td>
+            <td>99.9%</td>
+            <td>99.99%</td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">Priority support</th>
+            <td><span class="chip no">No</span></td>
+            <td><span class="chip yes">Yes</span></td>
+            <td><span class="chip yes">Yes</span></td>
+          </tr>
+          <tr>
+            <th scope="row" class="sticky-col">Advanced analytics</th>
+            <td><span class="chip no">No</span></td>
+            <td><span class="chip yes">Yes</span></td>
+            <td><span class="chip yes">Yes</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <section class="cards-fallback" aria-label="Plan comparison cards">
+      <article class="plan-card">
+        <h2>Starter</h2>
+        <ul>
+          <li><span>Monthly price</span><strong>$19</strong></li>
+          <li><span>Team members</span><strong>3</strong></li>
+          <li><span>Storage</span><strong>100 GB</strong></li>
+          <li><span>Custom domains</span><strong>1</strong></li>
+          <li><span>SLA uptime</span><strong>99.5%</strong></li>
+          <li><span>Priority support</span><strong>No</strong></li>
+          <li><span>Advanced analytics</span><strong>No</strong></li>
+        </ul>
+      </article>
+      <article class="plan-card featured">
+        <h2>Growth</h2>
+        <ul>
+          <li><span>Monthly price</span><strong>$49</strong></li>
+          <li><span>Team members</span><strong>15</strong></li>
+          <li><span>Storage</span><strong>1 TB</strong></li>
+          <li><span>Custom domains</span><strong>10</strong></li>
+          <li><span>SLA uptime</span><strong>99.9%</strong></li>
+          <li><span>Priority support</span><strong>Yes</strong></li>
+          <li><span>Advanced analytics</span><strong>Yes</strong></li>
+        </ul>
+      </article>
+      <article class="plan-card">
+        <h2>Scale</h2>
+        <ul>
+          <li><span>Monthly price</span><strong>$129</strong></li>
+          <li><span>Team members</span><strong>Unlimited</strong></li>
+          <li><span>Storage</span><strong>5 TB</strong></li>
+          <li><span>Custom domains</span><strong>Unlimited</strong></li>
+          <li><span>SLA uptime</span><strong>99.99%</strong></li>
+          <li><span>Priority support</span><strong>Yes</strong></li>
+          <li><span>Advanced analytics</span><strong>Yes</strong></li>
+        </ul>
+      </article>
+    </section>
+  </main>
+</body>
+</html>
