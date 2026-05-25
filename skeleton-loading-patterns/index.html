@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skeleton Loading Patterns</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="skeleton-page">
+      <header>
+        <p class="eyebrow">Reusable Modules</p>
+        <h1>Skeleton Loading Patterns</h1>
+        <p class="subtitle">Card, table row, profile, and dashboard skeletons with reusable shimmer styles.</p>
+      </header>
+
+      <section class="demo-grid">
+        <article class="demo-panel" aria-label="Card skeleton">
+          <h2>Card Skeleton</h2>
+          <div class="skeleton-card skeleton-base">
+            <div class="skeleton-media"></div>
+            <div class="skeleton-line w-70"></div>
+            <div class="skeleton-line"></div>
+            <div class="skeleton-line w-40"></div>
+          </div>
+        </article>
+
+        <article class="demo-panel" aria-label="Profile skeleton">
+          <h2>Profile Skeleton</h2>
+          <div class="skeleton-profile skeleton-base">
+            <div class="skeleton-avatar"></div>
+            <div class="skeleton-profile-content">
+              <div class="skeleton-line w-50"></div>
+              <div class="skeleton-line"></div>
+              <div class="skeleton-line w-30"></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="demo-panel span-2" aria-label="Table row skeleton">
+          <h2>Table Row Skeleton</h2>
+          <div class="skeleton-table">
+            <div class="skeleton-table-row skeleton-base">
+              <span class="skeleton-pill"></span><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-pill w-40"></span>
+            </div>
+            <div class="skeleton-table-row skeleton-base">
+              <span class="skeleton-pill"></span><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-pill w-60"></span>
+            </div>
+            <div class="skeleton-table-row skeleton-base">
+              <span class="skeleton-pill"></span><span class="skeleton-line"></span><span class="skeleton-line"></span><span class="skeleton-pill w-50"></span>
+            </div>
+          </div>
+        </article>
+
+        <article class="demo-panel span-2" aria-label="Dashboard skeleton">
+          <h2>Dashboard Skeleton</h2>
+          <div class="skeleton-dashboard">
+            <div class="skeleton-stat skeleton-base"><div class="skeleton-line w-40"></div><div class="skeleton-line w-70"></div></div>
+            <div class="skeleton-stat skeleton-base"><div class="skeleton-line w-35"></div><div class="skeleton-line w-60"></div></div>
+            <div class="skeleton-stat skeleton-base"><div class="skeleton-line w-45"></div><div class="skeleton-line w-55"></div></div>
+            <div class="skeleton-chart skeleton-base"></div>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
