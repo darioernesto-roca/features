@@ -1,6 +1,6 @@
 # UI Feature Gallery
 
-A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, animation techniques, and layout experiments. Each folder is a self-contained demo that you can open directly in a browser.
+A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, animation techniques, and layout experiments. Each folder is a self-contained demo that you can open directly in a browser, and `index.html` provides a modern entry page that links all demos.
 
 ## Contents
 
@@ -18,6 +18,7 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Mega Menu / Dropdown Navigation** | Multi-column dropdown navigation with icons, promo block, and mobile collapse behavior. | [`mega-menu-dropdown-navigation/index.html`](mega-menu-dropdown-navigation/index.html) |
 | **Pricing Table with Toggle** | A pricing section with monthly/yearly switch, a “Most Popular” plan ribbon, and feature comparison rows. | [`pricing-table-toggle/index.html`](pricing-table-toggle/index.html) |
 | **Scroll-driven Animation** | Scroll-linked progress bar and card entrance animations using `animation-timeline: scroll()` and `animation-timeline: view()` for scroll-driven effects. | [`scroll-driven-animation/index.html`](scroll-driven-animation/index.html) |
+| **Skeleton Loading Patterns** | Reusable skeleton modules (card, profile, table row, dashboard) with shimmer animation styling for loading states. | [`skeleton-loading-patterns/index.html`](skeleton-loading-patterns/index.html) |
 | **Timeline / Stepper Components** | Vertical timeline plus horizontal checkout stepper with progress and completed states. | [`timeline-stepper-components/index.html`](timeline-stepper-components/index.html) |
 | **Toast Notification Stack** | Success, error, and info toasts with timed dismissal plus animated entrance/exit transitions. | [`toast-notification-stack/index.html`](toast-notification-stack/index.html) |
 | **Testimonial Carousel** | A responsive testimonial slider with auto-play, previous/next controls, dot navigation, and pointer swipe-ready interactions. | [`testimonial-carousel/index.html`](testimonial-carousel/index.html) |
@@ -27,8 +28,8 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 
 These are static files—no build step required.
 
-1. Choose any feature folder.
-2. Open the HTML file in a browser (double-click or use a local server).
+1. Open `index.html` in the repository root to browse all features from one modern hub page.
+2. Click any feature card to navigate to its standalone module.
 3. Interact with the page (hover, scroll, or click) to see the effect.
 
 ### Optional: Local Server
