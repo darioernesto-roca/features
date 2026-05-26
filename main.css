@@ -38,6 +38,7 @@ body {
 }
 
 .feature-card {
+  display: block;
   text-decoration: none;
   color: inherit;
   background: var(--panel);
