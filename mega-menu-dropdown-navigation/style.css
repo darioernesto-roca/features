@@ -76,8 +76,8 @@ body {
     content: "";
     position: absolute;
     top: 100%;
-    right: 0;
-    width: 100%;
+    left: var(--mega-left, 0);
+    width: var(--mega-width, 100%);
     height: 0.3rem;
 }
 
@@ -189,6 +189,7 @@ body {
         position: static;
         width: 100%;
         margin-top: 0.35rem;
+        left: auto;
         right: auto;
         opacity: 1;
         pointer-events: auto;
