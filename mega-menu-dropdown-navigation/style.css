@@ -20,6 +20,7 @@ body {
 }
 
 .nav {
+    position: relative;
     width: min(70rem, 100%);
     margin: 0 auto;
     padding: 0.85rem 1rem;
@@ -68,7 +69,7 @@ body {
 }
 
 .has-mega {
-    position: relative;
+    position: static;
 }
 
 .has-mega::after {
@@ -84,8 +85,8 @@ body {
     position: absolute;
     top: 100%;
     margin-top: 0.3rem;
-    right: 0;
-    width: min(52rem, calc(100vw - 2rem));
+    right: 1rem;
+    width: min(52rem, calc(100% - 2rem));
     border: 1px solid #2d396f;
     border-radius: 0.9rem;
     background: #11183a;
