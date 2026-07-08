@@ -31,6 +31,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | Plugin | Description | Entry Point |
 | --- | --- | --- |
 | **UI Feature Blocks** | A lightweight Gutenberg block plugin with FAQ Accordion, Pricing Card, and Testimonial blocks adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-blocks/ui-feature-blocks.php`](wp-plugins/ui-feature-blocks/ui-feature-blocks.php) |
+| **UI Feature Elementor Widgets** | A lightweight Elementor widget pack with FAQ Accordion, Pricing Card, and Testimonial widgets adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php`](wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php) |
 
 ### WordPress Plugin Guidelines
 
