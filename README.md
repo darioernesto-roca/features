@@ -24,6 +24,24 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Testimonial Carousel** | A responsive testimonial slider with auto-play, previous/next controls, dot navigation, and pointer swipe-ready interactions. | [`testimonial-carousel/index.html`](testimonial-carousel/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 
+## WordPress Plugins
+
+This repository can also include WordPress plugins that adapt selected static UI prototypes into reusable WordPress features. Plugin projects live in `wp-plugins/` and should preserve compatibility with themes, Gutenberg, Elementor, Avada, WooCommerce, and performance plugins by using scoped assets and WordPress hooks instead of modifying core files.
+
+| Plugin | Description | Entry Point |
+| --- | --- | --- |
+| **UI Feature Blocks** | A lightweight Gutenberg block plugin with FAQ Accordion, Pricing Card, and Testimonial blocks adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-blocks/ui-feature-blocks.php`](wp-plugins/ui-feature-blocks/ui-feature-blocks.php) |
+| **UI Feature Elementor Widgets** | A lightweight Elementor widget pack with FAQ Accordion, Pricing Card, and Testimonial widgets adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php`](wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php) |
+| **UI Feature Shortcodes** | A simple shortcode plugin exposing pricing, FAQ, testimonial, timeline, modal, and toast UI components for classic editor, widgets, templates, and page builders. | [`wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php`](wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php) |
+
+### WordPress Plugin Guidelines
+
+- Keep plugins self-contained under `wp-plugins/<plugin-name>/`.
+- Scope CSS and JavaScript to plugin-specific classes to avoid theme and page-builder conflicts.
+- Prefer WordPress hooks, filters, block registration APIs, and enqueued assets over core or theme modifications.
+- Avoid unnecessary dependencies; document any dependency before adding it.
+- Run PHP syntax checks before committing plugin changes.
+
 ## How to View the Demos
 
 These are static files—no build step required.
