@@ -35,6 +35,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | **UI Feature Shortcodes** | A simple shortcode plugin exposing pricing, FAQ, testimonial, timeline, modal, and toast UI components for classic editor, widgets, templates, and page builders. | [`wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php`](wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php) |
 | **Accessible Modal Drawer** | An accessibility-first modal, drawer, and side-panel plugin with focus trap, ESC/backdrop close, ARIA labels, and shortcode/block triggers. | [`wp-plugins/accessible-modal-drawer/accessible-modal-drawer.php`](wp-plugins/accessible-modal-drawer/accessible-modal-drawer.php) |
 | **Advanced FAQ Help Center** | A full FAQ plugin with a custom FAQ post type, categories, accordion layouts, search/filter UI, FAQPage schema, shortcode output, and a Gutenberg block. | [`wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php`](wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php) |
+| **Pricing Table Builder** | A focused pricing table plugin with monthly/yearly toggles, featured ribbons, comparison rows, CTA buttons, currency settings, optional WooCommerce product links, shortcode output, and a Gutenberg block. | [`wp-plugins/pricing-table-builder/pricing-table-builder.php`](wp-plugins/pricing-table-builder/pricing-table-builder.php) |
 
 ### WordPress Plugin Guidelines
 
