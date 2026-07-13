@@ -24,6 +24,28 @@ A collection of standalone HTML/CSS prototypes showcasing modern UI patterns, an
 | **Testimonial Carousel** | A responsive testimonial slider with auto-play, previous/next controls, dot navigation, and pointer swipe-ready interactions. | [`testimonial-carousel/index.html`](testimonial-carousel/index.html) |
 | **Table Column Hover** | A data table that highlights the active column and row on hover using the CSS `:has()` selector for column targeting. | [`table-column/table-column-hover.html`](table-column/table-column-hover.html) |
 
+## WordPress Plugins
+
+This repository can also include WordPress plugins that adapt selected static UI prototypes into reusable WordPress features. Plugin projects live in `wp-plugins/` and should preserve compatibility with themes, Gutenberg, Elementor, Avada, WooCommerce, and performance plugins by using scoped assets and WordPress hooks instead of modifying core files.
+
+| Plugin | Description | Entry Point |
+| --- | --- | --- |
+| **UI Feature Blocks** | A lightweight Gutenberg block plugin with FAQ Accordion, Pricing Card, and Testimonial blocks adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-blocks/ui-feature-blocks.php`](wp-plugins/ui-feature-blocks/ui-feature-blocks.php) |
+| **UI Feature Elementor Widgets** | A lightweight Elementor widget pack with FAQ Accordion, Pricing Card, and Testimonial widgets adapted from the UI Feature Gallery patterns. | [`wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php`](wp-plugins/ui-feature-elementor-widgets/ui-feature-elementor-widgets.php) |
+| **UI Feature Shortcodes** | A simple shortcode plugin exposing pricing, FAQ, testimonial, timeline, modal, and toast UI components for classic editor, widgets, templates, and page builders. | [`wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php`](wp-plugins/ui-feature-shortcodes/ui-feature-shortcodes.php) |
+| **Accessible Modal Drawer** | An accessibility-first modal, drawer, and side-panel plugin with focus trap, ESC/backdrop close, ARIA labels, and shortcode/block triggers. | [`wp-plugins/accessible-modal-drawer/accessible-modal-drawer.php`](wp-plugins/accessible-modal-drawer/accessible-modal-drawer.php) |
+| **Advanced FAQ Help Center** | A full FAQ plugin with a custom FAQ post type, categories, accordion layouts, search/filter UI, FAQPage schema, shortcode output, and a Gutenberg block. | [`wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php`](wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php) |
+| **Pricing Table Builder** | A focused pricing table plugin with monthly/yearly toggles, featured ribbons, comparison rows, CTA buttons, currency settings, optional WooCommerce product links, shortcode output, and a Gutenberg block. | [`wp-plugins/pricing-table-builder/pricing-table-builder.php`](wp-plugins/pricing-table-builder/pricing-table-builder.php) |
+| **Testimonial Carousel** | A dedicated testimonial slider plugin with a testimonial post type, star ratings, client images/logos, autoplay controls, arrows/dots, Review schema, shortcode output, and a Gutenberg block. | [`wp-plugins/testimonial-carousel/testimonial-carousel.php`](wp-plugins/testimonial-carousel/testimonial-carousel.php) |
+
+### WordPress Plugin Guidelines
+
+- Keep plugins self-contained under `wp-plugins/<plugin-name>/`.
+- Scope CSS and JavaScript to plugin-specific classes to avoid theme and page-builder conflicts.
+- Prefer WordPress hooks, filters, block registration APIs, and enqueued assets over core or theme modifications.
+- Avoid unnecessary dependencies; document any dependency before adding it.
+- Run PHP syntax checks before committing plugin changes.
+
 ## How to View the Demos
 
 These are static files—no build step required.
