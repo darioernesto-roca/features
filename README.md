@@ -37,6 +37,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | **Advanced FAQ Help Center** | A full FAQ plugin with a custom FAQ post type, categories, accordion layouts, search/filter UI, FAQPage schema, shortcode output, and a Gutenberg block. | [`wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php`](wp-plugins/advanced-faq-help-center/advanced-faq-help-center.php) |
 | **Pricing Table Builder** | A focused pricing table plugin with monthly/yearly toggles, featured ribbons, comparison rows, CTA buttons, currency settings, optional WooCommerce product links, shortcode output, and a Gutenberg block. | [`wp-plugins/pricing-table-builder/pricing-table-builder.php`](wp-plugins/pricing-table-builder/pricing-table-builder.php) |
 | **Testimonial Carousel** | A dedicated testimonial slider plugin with a testimonial post type, star ratings, client images/logos, autoplay controls, arrows/dots, Review schema, shortcode output, and a Gutenberg block. | [`wp-plugins/testimonial-carousel/testimonial-carousel.php`](wp-plugins/testimonial-carousel/testimonial-carousel.php) |
+| **Mega Menu Enhancer** | A theme-safe nav menu enhancer with multi-column dropdowns, icons, promo blocks, mobile collapse behavior, menu item descriptions, scoped CSS, shortcode output, and a theme helper. | [`wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php`](wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php) |
 
 ### WordPress Plugin Guidelines
 
