@@ -38,6 +38,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | **Pricing Table Builder** | A focused pricing table plugin with monthly/yearly toggles, featured ribbons, comparison rows, CTA buttons, currency settings, optional WooCommerce product links, shortcode output, and a Gutenberg block. | [`wp-plugins/pricing-table-builder/pricing-table-builder.php`](wp-plugins/pricing-table-builder/pricing-table-builder.php) |
 | **Testimonial Carousel** | A dedicated testimonial slider plugin with a testimonial post type, star ratings, client images/logos, autoplay controls, arrows/dots, Review schema, shortcode output, and a Gutenberg block. | [`wp-plugins/testimonial-carousel/testimonial-carousel.php`](wp-plugins/testimonial-carousel/testimonial-carousel.php) |
 | **Mega Menu Enhancer** | A theme-safe nav menu enhancer with multi-column dropdowns, icons, promo blocks, mobile collapse behavior, menu item descriptions, scoped CSS, shortcode output, and a theme helper. | [`wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php`](wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php) |
+| **Notification Toast** | A site-wide toast notification plugin with success/error/info/warning styles, timed dismissal, cookie/session display rules, WooCommerce event integrations, an admin notice builder, shortcodes, and API triggers. | [`wp-plugins/notification-toast/notification-toast.php`](wp-plugins/notification-toast/notification-toast.php) |
 
 ### WordPress Plugin Guidelines
 
