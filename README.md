@@ -39,6 +39,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | **Testimonial Carousel** | A dedicated testimonial slider plugin with a testimonial post type, star ratings, client images/logos, autoplay controls, arrows/dots, Review schema, shortcode output, and a Gutenberg block. | [`wp-plugins/testimonial-carousel/testimonial-carousel.php`](wp-plugins/testimonial-carousel/testimonial-carousel.php) |
 | **Mega Menu Enhancer** | A theme-safe nav menu enhancer with multi-column dropdowns, icons, promo blocks, mobile collapse behavior, menu item descriptions, scoped CSS, shortcode output, and a theme helper. | [`wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php`](wp-plugins/mega-menu-enhancer/mega-menu-enhancer.php) |
 | **Notification Toast** | A site-wide toast notification plugin with success/error/info/warning styles, timed dismissal, cookie/session display rules, WooCommerce event integrations, an admin notice builder, shortcodes, and API triggers. | [`wp-plugins/notification-toast/notification-toast.php`](wp-plugins/notification-toast/notification-toast.php) |
+| **Accessibility Utilities** | A lightweight accessibility helper plugin with skip links, focus outlines, reduced-motion CSS, external link indicators, ARIA live regions, keyboard trap utilities, and an admin audit checklist. | [`wp-plugins/accessibility-utilities/accessibility-utilities.php`](wp-plugins/accessibility-utilities/accessibility-utilities.php) |
 
 ### WordPress Plugin Guidelines
 
