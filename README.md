@@ -41,6 +41,7 @@ This repository can also include WordPress plugins that adapt selected static UI
 | **Notification Toast** | A site-wide toast notification plugin with success/error/info/warning styles, timed dismissal, cookie/session display rules, WooCommerce event integrations, an admin notice builder, shortcodes, and API triggers. | [`wp-plugins/notification-toast/notification-toast.php`](wp-plugins/notification-toast/notification-toast.php) |
 | **Accessibility Utilities** | A lightweight accessibility helper plugin with skip links, focus outlines, reduced-motion CSS, external link indicators, ARIA live regions, keyboard trap utilities, and an admin audit checklist. | [`wp-plugins/accessibility-utilities/accessibility-utilities.php`](wp-plugins/accessibility-utilities/accessibility-utilities.php) |
 | **Micro Survey Feedback** | A small page-level feedback plugin with emoji/rating reactions, optional comments, page/post association, admin results, shortcode/block output, optional toast thank-yous, and no external analytics dependency. | [`wp-plugins/micro-survey-feedback/micro-survey-feedback.php`](wp-plugins/micro-survey-feedback/micro-survey-feedback.php) |
+| **Reading Progress TOC** | A content enhancement plugin with a reading progress bar, generated table of contents, smooth anchor navigation, active heading highlight, per-post disable controls, shortcode output, and a Gutenberg block. | [`wp-plugins/reading-progress-toc/reading-progress-toc.php`](wp-plugins/reading-progress-toc/reading-progress-toc.php) |
 
 ### WordPress Plugin Guidelines
 
