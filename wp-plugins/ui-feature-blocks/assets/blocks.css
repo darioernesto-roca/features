@@ -1,0 +1,78 @@
+.wp-block-ui-feature-faq,
+.wp-block-ui-feature-pricing,
+.wp-block-ui-feature-testimonial {
+  border: 1px solid color-mix(in srgb, currentColor 14%, transparent);
+  border-radius: 18px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  box-sizing: border-box;
+  color: inherit;
+  margin-block: 1.5rem;
+  padding: 1.25rem;
+}
+
+.wp-block-ui-feature-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.wp-block-ui-feature-faq__answer {
+  margin-block-start: 0.75rem;
+}
+
+.wp-block-ui-feature-pricing {
+  background: linear-gradient(135deg, #ffffff 0%, #eef2ff 100%);
+  color: #172033;
+  max-width: 420px;
+}
+
+.wp-block-ui-feature-pricing__eyebrow {
+  color: #4f46e5;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  margin: 0 0 0.5rem;
+  text-transform: uppercase;
+}
+
+.wp-block-ui-feature-pricing h2,
+.wp-block-ui-feature-testimonial blockquote {
+  margin-block: 0 0.75rem;
+}
+
+.wp-block-ui-feature-pricing__price {
+  font-size: clamp(2rem, 6vw, 3rem);
+  font-weight: 800;
+  line-height: 1;
+  margin-block: 0 1rem;
+}
+
+.wp-block-ui-feature-pricing__button {
+  background: #4f46e5;
+  border-radius: 999px;
+  color: #ffffff;
+  display: inline-flex;
+  font-weight: 700;
+  margin-block-start: 1rem;
+  padding: 0.75rem 1rem;
+}
+
+.wp-block-ui-feature-testimonial {
+  background: #0f172a;
+  color: #ffffff;
+}
+
+.wp-block-ui-feature-testimonial blockquote {
+  font-size: clamp(1.15rem, 3vw, 1.6rem);
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.wp-block-ui-feature-testimonial figcaption {
+  display: grid;
+  gap: 0.15rem;
+}
+
+.wp-block-ui-feature-testimonial figcaption span {
+  color: #cbd5e1;
+  font-size: 0.95rem;
+}

@@ -1,0 +1,127 @@
+.tc-carousel {
+  background: #0f172a;
+  border-radius: 24px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+  box-sizing: border-box;
+  color: #ffffff;
+  margin-block: 1.5rem;
+  overflow: hidden;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.tc-carousel__header {
+  align-items: center;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-block-end: 1rem;
+}
+
+.tc-carousel__header h2 {
+  margin: 0;
+}
+
+.tc-carousel__controls,
+.tc-carousel__dots {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tc-carousel__controls button,
+.tc-carousel__dots button {
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.tc-carousel__controls button {
+  background: rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  color: #ffffff;
+  font-weight: 800;
+  min-height: 2.25rem;
+  min-width: 2.25rem;
+  padding: 0.35rem 0.7rem;
+}
+
+.tc-carousel__controls button:hover,
+.tc-carousel__controls button:focus {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.tc-carousel__track {
+  min-height: 260px;
+  position: relative;
+}
+
+.tc-slide {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  display: grid;
+  gap: 1rem;
+  margin: 0;
+  padding: clamp(1rem, 3vw, 1.5rem);
+}
+
+.tc-slide[hidden] {
+  display: none;
+}
+
+.tc-slide__image {
+  border-radius: 999px;
+  height: 72px;
+  object-fit: cover;
+  width: 72px;
+}
+
+.tc-slide__stars {
+  color: #facc15;
+  font-size: 1.1rem;
+  letter-spacing: 0.08em;
+}
+
+.tc-slide blockquote {
+  border: 0;
+  font-size: clamp(1.15rem, 3vw, 1.6rem);
+  font-weight: 800;
+  line-height: 1.35;
+  margin: 0;
+  padding: 0;
+}
+
+.tc-slide figcaption {
+  display: grid;
+  gap: 0.2rem;
+}
+
+.tc-slide figcaption span {
+  color: #cbd5e1;
+}
+
+.tc-carousel__dots {
+  justify-content: center;
+  margin-block-start: 1rem;
+}
+
+.tc-carousel__dots button {
+  background: rgba(255, 255, 255, 0.35);
+  border-radius: 999px;
+  height: 0.75rem;
+  padding: 0;
+  width: 0.75rem;
+}
+
+.tc-carousel__dots button.is-active {
+  background: #ffffff;
+  transform: scale(1.2);
+}
+
+.tc-carousel__empty {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  margin: 0;
+  padding: 1rem;
+  text-align: center;
+}
