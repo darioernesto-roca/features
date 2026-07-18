@@ -1,0 +1,50 @@
+.au-skip-link {
+  background: #111827;
+  border-radius: 0 0 8px 8px;
+  color: #ffffff;
+  font-weight: 800;
+  left: 1rem;
+  padding: 0.75rem 1rem;
+  position: fixed;
+  text-decoration: none;
+  top: 0;
+  transform: translateY(-120%);
+  transition: transform 160ms ease;
+  z-index: 100000;
+}
+
+.au-skip-link:focus {
+  transform: translateY(0);
+}
+
+.au-focus-outline-enabled :where(a, button, input, textarea, select, summary, [tabindex]):focus-visible {
+  outline: 3px solid #2563eb;
+  outline-offset: 3px;
+}
+
+[data-au-external-link]::after {
+  content: " ↗";
+  font-size: 0.85em;
+  font-weight: 700;
+}
+
+.au-live-region {
+  clip: rect(1px, 1px, 1px, 1px);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute !important;
+  white-space: nowrap;
+  width: 1px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .au-reduced-motion-enabled *,
+  .au-reduced-motion-enabled *::before,
+  .au-reduced-motion-enabled *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+    transition-duration: 0.001ms !important;
+  }
+}

@@ -1,0 +1,122 @@
+.rptoc-progress {
+	background: rgba(15, 23, 42, 0.08);
+	height: 4px;
+	left: 0;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 9999;
+}
+
+.admin-bar .rptoc-progress {
+	top: 32px;
+}
+
+.rptoc-progress__bar {
+	background: linear-gradient(90deg, #2563eb, #14b8a6);
+	display: block;
+	height: 100%;
+	transition: width 120ms ease-out;
+	width: 0;
+}
+
+.rptoc-toc {
+	--rptoc-accent: #2563eb;
+	--rptoc-border: #dbe3ef;
+	--rptoc-muted: #64748b;
+	--rptoc-surface: #ffffff;
+	--rptoc-text: #0f172a;
+	background: var(--rptoc-surface);
+	border: 1px solid var(--rptoc-border);
+	border-radius: 18px;
+	box-shadow: 0 16px 42px rgba(15, 23, 42, 0.08);
+	color: var(--rptoc-text);
+	margin: 1.5rem 0;
+	max-width: 420px;
+	padding: 1.25rem;
+}
+
+.rptoc-toc__title {
+	font-size: 1.05rem;
+	line-height: 1.25;
+	margin: 0 0 0.75rem;
+}
+
+.rptoc-toc__placeholder {
+	color: var(--rptoc-muted);
+	margin: 0;
+}
+
+.rptoc-toc__list {
+	counter-reset: rptoc;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+.rptoc-toc__item {
+	margin: 0;
+	padding: 0;
+}
+
+.rptoc-toc__item--level-3 {
+	padding-left: 1rem;
+}
+
+.rptoc-toc__item--level-4,
+.rptoc-toc__item--level-5,
+.rptoc-toc__item--level-6 {
+	padding-left: 1.75rem;
+}
+
+.rptoc-toc__link {
+	align-items: flex-start;
+	border-radius: 10px;
+	color: var(--rptoc-text);
+	display: flex;
+	gap: 0.5rem;
+	line-height: 1.35;
+	padding: 0.45rem 0.5rem;
+	text-decoration: none;
+	transition: background 160ms ease, color 160ms ease;
+}
+
+.rptoc-toc__link::before {
+	color: var(--rptoc-muted);
+	content: counter(rptoc, decimal-leading-zero);
+	counter-increment: rptoc;
+	font-size: 0.75rem;
+	font-weight: 700;
+	line-height: 1.8;
+}
+
+.rptoc-toc__link:hover,
+.rptoc-toc__link:focus-visible,
+.rptoc-toc__link.is-active {
+	background: rgba(37, 99, 235, 0.1);
+	color: var(--rptoc-accent);
+	outline: none;
+}
+
+.rptoc-toc__link[aria-current="true"] {
+	font-weight: 700;
+}
+
+.rptoc-editor-preview .rptoc-toc__item {
+	color: var(--rptoc-muted);
+	font-style: italic;
+	padding: 0.45rem 0.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.rptoc-progress__bar,
+	.rptoc-toc__link {
+		transition: none;
+	}
+}
+
+@media screen and (max-width: 782px) {
+	.admin-bar .rptoc-progress {
+		top: 46px;
+	}
+}
