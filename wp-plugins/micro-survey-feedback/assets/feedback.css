@@ -1,0 +1,137 @@
+.msfw-widget {
+	--msfw-accent: #2563eb;
+	--msfw-border: #dbe3ef;
+	--msfw-muted: #64748b;
+	--msfw-surface: #ffffff;
+	--msfw-text: #0f172a;
+	color: var(--msfw-text);
+	font: inherit;
+	margin: 1.5rem 0;
+}
+
+.msfw-card {
+	background: var(--msfw-surface);
+	border: 1px solid var(--msfw-border);
+	border-radius: 18px;
+	box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+	max-width: 680px;
+	padding: clamp(1.25rem, 3vw, 2rem);
+}
+
+.msfw-title {
+	font-size: clamp(1.25rem, 2vw, 1.65rem);
+	line-height: 1.2;
+	margin: 0 0 0.45rem;
+}
+
+.msfw-description {
+	color: var(--msfw-muted);
+	margin: 0 0 1rem;
+}
+
+.msfw-emoji-group {
+	display: grid;
+	gap: 0.65rem;
+	grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+	margin-bottom: 1rem;
+}
+
+.msfw-emoji {
+	align-items: center;
+	background: #f8fafc;
+	border: 1px solid var(--msfw-border);
+	border-radius: 14px;
+	color: var(--msfw-text);
+	cursor: pointer;
+	display: flex;
+	font: inherit;
+	gap: 0.45rem;
+	justify-content: center;
+	padding: 0.8rem;
+	transition: border-color 160ms ease, box-shadow 160ms ease, transform 160ms ease;
+}
+
+.msfw-emoji:hover,
+.msfw-emoji:focus-visible,
+.msfw-emoji.is-active {
+	border-color: var(--msfw-accent);
+	box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.16);
+	outline: none;
+	transform: translateY(-1px);
+}
+
+.msfw-rating {
+	border: 0;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.5rem;
+	margin: 0 0 1rem;
+	padding: 0;
+}
+
+.msfw-rating legend,
+.msfw-comment-label {
+	color: var(--msfw-muted);
+	font-size: 0.9rem;
+	font-weight: 700;
+	margin-bottom: 0.45rem;
+	width: 100%;
+}
+
+.msfw-rating label {
+	align-items: center;
+	background: #f8fafc;
+	border: 1px solid var(--msfw-border);
+	border-radius: 999px;
+	display: inline-flex;
+	gap: 0.35rem;
+	padding: 0.45rem 0.7rem;
+}
+
+.msfw-widget textarea {
+	border: 1px solid var(--msfw-border);
+	border-radius: 12px;
+	box-sizing: border-box;
+	display: block;
+	font: inherit;
+	margin-bottom: 1rem;
+	padding: 0.75rem;
+	width: 100%;
+}
+
+.msfw-widget textarea:focus-visible,
+.msfw-rating input:focus-visible {
+	outline: 3px solid rgba(37, 99, 235, 0.3);
+	outline-offset: 2px;
+}
+
+.msfw-submit {
+	background: var(--msfw-accent);
+	border: 0;
+	border-radius: 999px;
+	color: #ffffff;
+	cursor: pointer;
+	font: inherit;
+	font-weight: 700;
+	padding: 0.75rem 1.2rem;
+}
+
+.msfw-submit:disabled {
+	cursor: wait;
+	opacity: 0.7;
+}
+
+.msfw-status {
+	color: #047857;
+	font-weight: 700;
+	margin: 0.85rem 0 0;
+	min-height: 1.4em;
+}
+
+.msfw-status.is-error {
+	color: #b91c1c;
+}
+
+.msfw-editor-preview .msfw-emoji {
+	cursor: default;
+}
