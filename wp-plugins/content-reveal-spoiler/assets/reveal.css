@@ -1,0 +1,75 @@
+.crs-reveal {
+  --crs-accent: #2563eb;
+  --crs-border: #d8dee9;
+  --crs-surface: #f8fafc;
+  margin-block: 1rem;
+}
+
+.crs-reveal__trigger {
+  appearance: none;
+  background: var(--crs-accent);
+  border: 2px solid transparent;
+  border-radius: 0.375rem;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 600;
+  padding: 0.625rem 1rem;
+}
+
+.crs-reveal__trigger:hover {
+  filter: brightness(0.92);
+}
+
+.crs-reveal__trigger:focus-visible {
+  outline: 3px solid color-mix(in srgb, var(--crs-accent) 45%, transparent);
+  outline-offset: 3px;
+}
+
+.crs-reveal__content {
+  border: 1px solid var(--crs-border);
+  border-radius: 0.5rem;
+  margin-top: 0.75rem;
+  padding: 1rem;
+}
+
+.crs-reveal__content[hidden] {
+  display: none !important;
+}
+
+.crs-reveal--blur:not(.is-open) .crs-reveal__content {
+  display: block !important;
+  filter: blur(0.45rem);
+  pointer-events: none;
+  user-select: none;
+}
+
+.crs-reveal--blur .crs-reveal__trigger {
+  position: relative;
+  z-index: 1;
+}
+
+.crs-reveal--blur:not(.is-open) .crs-reveal__content > * {
+  visibility: hidden;
+}
+
+.crs-reveal--blur:not(.is-open) .crs-reveal__content::before {
+  color: transparent;
+  content: "Hidden content hidden content hidden content";
+  display: block;
+  min-height: 2.5rem;
+  text-shadow: 0 0 0.5rem #475569;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .crs-reveal__content {
+    animation: crs-reveal-in 160ms ease-out;
+  }
+}
+
+@keyframes crs-reveal-in {
+  from {
+    opacity: 0;
+    transform: translateY(-0.25rem);
+  }
+}
