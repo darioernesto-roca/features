@@ -55,22 +55,81 @@ This repository can also include WordPress plugins that adapt selected static UI
 - Avoid unnecessary dependencies; document any dependency before adding it.
 - Run PHP syntax checks before committing plugin changes.
 
-## How to View the Demos
+## Test the Static Features Locally
 
-These are static files—no build step required.
-
-1. Open `index.html` in the repository root to browse all features from one modern hub page.
-2. Click any feature card to navigate to its standalone module.
-3. Interact with the page (hover, scroll, or click) to see the effect.
-
-### Optional: Local Server
-If you prefer running a local server (e.g., for relative assets), you can use:
+The static demos have no package dependencies or build step. From the repository root, start a local server:
 
 ```bash
-python3 -m http.server
+python3 -m http.server 8000
 ```
 
-Then navigate to `http://localhost:8000/<feature-folder>/index.html`.
+Open <http://localhost:8000/> to use the gallery, or use the direct URLs below. Stop the server with <kbd>Ctrl</kbd>+<kbd>C</kbd>. Opening the files directly also works, but the server more closely matches normal browser hosting and avoids `file://` restrictions.
+
+### Feature-by-feature test checklist
+
+Use a current version of Chrome, Firefox, Safari, or Edge. Also resize the browser to a narrow mobile viewport and use the keyboard where the feature is interactive.
+
+| Feature | Local URL | What to verify |
+| --- | --- | --- |
+| Accessible Modal Variants | <http://localhost:8000/accessible-modal-variants/> | Open each modal/drawer, press <kbd>Tab</kbd> to confirm focus stays inside, then close with <kbd>Esc</kbd>, the close button, and the backdrop. |
+| Button Rotating Border Glow Effect | <http://localhost:8000/button-rotating-border-glow-effect/> | Confirm the border rotates smoothly and the button remains readable and clickable. |
+| Command Palette UI | <http://localhost:8000/command-palette-ui/> | Open with <kbd>Ctrl</kbd>/<kbd>⌘</kbd>+<kbd>K</kbd>, navigate with arrow keys, select with <kbd>Enter</kbd>, and close with <kbd>Esc</kbd>. |
+| Comparison Table | <http://localhost:8000/comparison-table-sticky/> | Scroll both ways to check the sticky header/first column and hover highlights; verify the mobile card layout. |
+| Cards with Inverted Border Radius | <http://localhost:8000/cards-with-inverted-border-radius/> | Check image crops, inset icon corners, and tag wrapping at desktop and mobile widths. |
+| FAQ Accordion Variants | <http://localhost:8000/faq-accordion-variants/> | Expand and collapse every question, including nested groups; confirm icon and panel transitions. |
+| Fluid Grid Gallery | <http://localhost:8000/fluid-grid-gallery/> | Hover every image and confirm its row expands without overlap or layout overflow. |
+| Fluid Grid Gallery v2 | <http://localhost:8000/fluid-grid-gallery-2/> | Hover images and confirm row/column expansion, color transition, and stable surrounding layout. |
+| Image Carousel 3D | <http://localhost:8000/image-carousel-3d/> | Use both direction controls and confirm the carousel changes rotation direction without visual clipping. |
+| Landing Page Mockups | <http://localhost:8000/landing-pages-mockups/> | Scroll each tall preview independently and confirm cards remain aligned and responsive. |
+| Mega Menu / Dropdown Navigation | <http://localhost:8000/mega-menu-dropdown-navigation/> | Open each desktop dropdown, then test the collapsed navigation and submenu controls at a mobile width. |
+| Pricing Table with Toggle | <http://localhost:8000/pricing-table-toggle/> | Switch monthly/yearly billing and confirm all prices, the featured ribbon, and comparison rows update correctly. |
+| Scroll-driven Animation | <http://localhost:8000/scroll-driven-animation/> | Scroll the full page and confirm the progress indicator and card entrances track the scroll position. |
+| Skeleton Loading Patterns | <http://localhost:8000/skeleton-loading-patterns/> | Confirm each skeleton shape renders and its shimmer remains contained at desktop and mobile widths. |
+| Timeline / Stepper Components | <http://localhost:8000/timeline-stepper-components/> | Check completed/current states and verify the vertical timeline and horizontal stepper do not overflow. |
+| Toast Notification Stack | <http://localhost:8000/toast-notification-stack/> | Trigger every toast type and confirm stacking, timed dismissal, and enter/exit animations. |
+| Testimonial Carousel | <http://localhost:8000/testimonial-carousel/> | Test previous/next buttons, dots, autoplay, and pointer swipes; confirm the active slide stays synchronized. |
+| Table Column Hover | <http://localhost:8000/table-column/table-column-hover.html> | Hover cells in every column and confirm the correct row and column are highlighted. |
+
+Some demos load public fonts or images from CDNs, so those assets require an internet connection even though the repository itself needs no install step. Modern CSS features such as `:has()`, `@property`, and scroll-driven animations may look different in older browsers.
+
+## Test the WordPress Plugins Locally
+
+Use an existing local WordPress installation so the plugins can be tested against its active theme and normal WordPress APIs. No Composer, Node, or database migration step is required by this repository.
+
+1. Copy or symlink the plugin you want to test into the local site's `wp-content/plugins/` directory. For example:
+
+   ```bash
+   ln -s "$(pwd)/wp-plugins/content-reveal-spoiler" /path/to/wordpress/wp-content/plugins/content-reveal-spoiler
+   ```
+
+2. In **WordPress Admin → Plugins**, activate that plugin. Activate Elementor or WooCommerce first only when the test below calls for it.
+3. Create a draft page, add the listed block or shortcode, publish/preview it, and run the verification steps.
+4. Check the browser console for JavaScript errors and test once with a default WordPress theme and once with the project's target theme/page builder when compatibility matters.
+5. After testing, deactivate the plugin and remove the symlink (or copied folder). Do not delete the source folder in this repository.
+
+> **Tip:** Each plugin's linked README documents its complete shortcode attributes, APIs, and compatibility notes. The examples below are intentionally the shortest useful smoke tests.
+
+### Plugin-by-plugin test checklist
+
+| Plugin | Minimal local test | What to verify |
+| --- | --- | --- |
+| UI Feature Blocks | Insert **UI FAQ Accordion**, **UI Pricing Card**, and **UI Testimonial** blocks. | Save and reload the editor, then view the page and confirm all content and scoped styles match the editor settings. |
+| UI Feature Elementor Widgets | With Elementor active, add all three widgets from **UI Feature Gallery**. | Confirm controls update the preview and frontend; deactivate Elementor and confirm the plugin shows an admin notice rather than a fatal error. |
+| UI Feature Shortcodes | Add `[ui_pricing_table]`, `[ui_faq_accordion question="Test?"]Yes.[/ui_faq_accordion]`, `[ui_testimonial_carousel]`, `[ui_timeline]`, `[ui_modal]`, and `[ui_toast]`. | Exercise each interactive component and confirm multiple shortcodes can coexist without style or script conflicts. |
+| Accessible Modal Drawer | Add `[amd_dialog id="local-test" title="Local test"]Dialog content.[/amd_dialog]`. | Open it using mouse and keyboard; check focus trapping, ARIA state, <kbd>Esc</kbd>, backdrop close, and focus return. |
+| Advanced FAQ Help Center | Create two **FAQs**, assign categories, and add `[advanced_faq_help_center]`. | Search, filter, and expand answers; if schema is enabled, confirm one valid `FAQPage` JSON-LD script is output. |
+| Pricing Table Builder | Add `[ptb_pricing_table plans="Starter|Pro" monthly_prices="10|20" yearly_prices="100|200" featured="1"]`. | Toggle billing, verify both price sets and the featured plan, and test CTA links. |
+| Testimonial Carousel | Create at least three **Testimonials**, then add `[testimonial_carousel]`. | Test arrows, dots, autoplay, ratings/images, responsive layout, and pause/focus behavior. |
+| Mega Menu Enhancer | Create a menu with parent/child items and add `[mme_menu menu="Main Menu" columns="3"]`. | Test desktop dropdowns, descriptions/icons, keyboard access, and mobile submenu toggles. |
+| Notification Toast | Add `[toast_notice trigger="button" label="Show toast" message="Local test" type="success" rule="always"]`. | Trigger and dismiss it; verify timing, focus behavior, and the configured session/cookie display rules. |
+| Accessibility Utilities | Activate it and open **Settings → Accessibility Utilities**. | Test the skip link and visible keyboard focus, enable reduced motion at OS level, and exercise the audit checklist. |
+| Micro Survey Feedback | Add `[micro_survey_feedback]` to a post. | Submit a reaction, rating, and comment; confirm validation/status feedback and the saved result under **Tools → Micro Survey Feedback**. |
+| Reading Progress TOC | Create a long post with H2–H4 headings and add `[reading_progress_toc]`. | Scroll and use TOC links; verify progress, active-heading state, smooth anchors, unique heading IDs, and the per-post disable option. |
+| WooCommerce Product Feature Matrix | With WooCommerce active, create products with shared attributes and add `[wc_product_feature_matrix products="12,34"]` using real local IDs. | Verify product data, sticky areas, attribute filters, responsive overflow, and add-to-cart behavior. |
+| Content Reveal Spoiler | Add `[content_reveal label="Show answer"]The answer is 42.[/content_reveal]` and a blurred `[spoiler]`. | Toggle with mouse and keyboard; confirm labels/ARIA state, one-way and initially-open options, nesting, and reduced motion. |
+| Accessible Tabs and Accordion Blocks | Insert both **Accessible Tabs** and **Accessible Accordion** blocks with several sections. | Test arrow/Home/End tab navigation, accordion modes, responsive layout, focus states, and a direct `#atab-...` URL. |
+
+For focused setup and usage details, open the README inside the relevant `wp-plugins/<plugin-name>/` directory.
 
 ## Notes
 
